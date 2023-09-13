@@ -41,5 +41,124 @@ How to Download and use the application
 
 ### Run the application using CLI
 ```
-1) Go the path where application is clone and cd to Account-Service
-2) 
+1) Go the path where application is clone and cd to Account-Service/
+2) To build the package(jar file) use this command ``` mvn package ``` or ``` mvn clean install ```
+3) Go to target folder in which is available at the root folder ``` cd target ```
+4) 1st way : To Run the application If maven is installed then use ``` mvn spring-boot:run``` in the root folder
+5) 2nd way : Use ``` ./mvnw spring-boot:run ``` if maven is not installed in the root folder
+6) 3rd way : cd to target folder and run ```java -jar Account-Service-0.0.1-SNAPSHOT.jar ```
+```
+### How to test the application
+
+**Post Request to create account**
+
+_Endpoint_ : ``` http://192.168.138.156:9901/api/accounts/createAccount ```
+
+_curl --location 'http://192.168.138.156:9901/api/accounts/createAccount' \
+--header 'Content-Type: application/json' \
+--data '{
+ "accountNum":101010,
+ "accountType":"Savings",
+ "accountOpeningDate":"1995-02-24",
+ "balance":9563.2
+}'_
+
+**Output**
+```
+{
+    "accountNum": 101011,
+    "accountType": "Savings",
+    "accountOpeningDate": "2019-08-25",
+    "balance":"98562"
+}
+```
+
+
+**Post Request to create login**
+
+_Endpoint_ : ``` http://192.168.138.156:9902/api/login/createLogin ```
+
+_curl --location 'http://192.168.138.156:9902/api/login/createLogin' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "username":"test",
+ "password":"test",
+ "email":"test123@gmail.com",
+ "accountNum": 101010
+}'_
+
+**Output**
+```
+{
+    "username":"test",
+    "password":"test",
+    "email": "test123@gmail.com",
+    "accountNum": 101010
+}
+```
+
+
+**Get Request to get all accounts**
+
+_Endpoint_ : http://192.168.138.156:9901/api/accounts/accounts
+
+_curl --location 'http://192.168.138.156:9901/api/accounts/accounts'_
+
+**Output**
+```
+[
+    {
+        "accountNum": 101010,
+        "accountType": "Savings",
+        "accountOpeningDate": "2019-02-12",
+        "balance": 10000.0
+    }
+]
+```
+
+**Get Request to get specific account**
+
+_Endpoint_ : http://192.168.138.156:9901/api/accounts/101010
+
+_curl --location 'http://192.168.138.156:9901/api/accounts/101010'_
+
+**Output**
+
+```
+{
+    "accountNum": 101010,
+    "accountType": "Savings",
+    "accountOpeningDate": "2019-02-12",
+    "balance": 10000.0
+}
+```
+
+**Get Request to get both login and account details**
+
+_Endpoint_ : http://192.168.138.156:9902/api/login/account/101012
+
+_curl --location 'http://192.168.138.156:9902/api/login/account/101012'_
+
+**Output**
+```
+{
+    "account": {
+        "accountNum": 101012,
+        "accountType": "Savings",
+        "accountOpeningDate": "2012-03-21",
+        "balance": 5623.0
+    },
+    "loginDto": {
+        "account_Num": 101012,
+        "loginId": 4,
+        "username": "pavan123",
+        "password": "pavan123",
+        "email": "pavan123@gmail.com"
+    }
+}
+```
+
+
+
+
+
