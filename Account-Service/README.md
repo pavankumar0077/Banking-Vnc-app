@@ -74,30 +74,6 @@ _curl --location 'http://192.168.138.156:9901/api/accounts/createAccount' \
 ```
 
 
-**Post Request to create login**
-
-_Endpoint_ : ``` http://192.168.138.156:9902/api/login/createLogin ```
-
-_curl --location 'http://192.168.138.156:9902/api/login/createLogin' \
---header 'Content-Type: application/json' \
---data-raw '{
- "username":"test",
- "password":"test",
- "email":"test123@gmail.com",
- "accountNum": 101010
-}'_
-
-**Output**
-```
-{
-    "username":"test",
-    "password":"test",
-    "email": "test123@gmail.com",
-    "accountNum": 101010
-}
-```
-
-
 **Get Request to get all accounts**
 
 _Endpoint_ : http://192.168.138.156:9901/api/accounts/accounts
@@ -133,30 +109,6 @@ _curl --location 'http://192.168.138.156:9901/api/accounts/101010'_
 }
 ```
 
-**Get Request to get both login and account details**
-
-_Endpoint_ : http://192.168.138.156:9902/api/login/account/101012
-
-_curl --location 'http://192.168.138.156:9902/api/login/account/101012'_
-
-**Output**
-```
-{
-    "account": {
-        "accountNum": 101012,
-        "accountType": "Savings",
-        "accountOpeningDate": "2012-03-21",
-        "balance": 5623.0
-    },
-    "loginDto": {
-        "account_Num": 101012,
-        "loginId": 4,
-        "username": "pavan123",
-        "password": "pavan123",
-        "email": "pavan123@gmail.com"
-    }
-}
-```
 
 
 
