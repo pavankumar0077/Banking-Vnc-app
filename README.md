@@ -78,7 +78,7 @@ mysql> select * from accounts;
 ## To Set up and Run Account-Service
 
 ### Pull the docker image
-``` docker pull pavan0077/vnc-accounts:v1 ```
+``` sudo docker pull pavan0077/vnc-accounts:v1 ```
 
 OR
 
@@ -102,7 +102,7 @@ And check for IPAddress
 ## To Set up and Run User-Login-Inter-Com
 
 ### Pull the docker image
-``` docker pull pavan0077/vnc-login:v2 ```
+``` sudo docker pull pavan0077/vnc-login:v2 ```
 
 OR
 
@@ -122,6 +122,47 @@ And check for IPAddress
 ``` "IPAddress": "172.17.0.4" ``` 
 
 ```
+
+## Build and Run android application 
+
+**In this repo we have three folders use ``` Bank-Mag``` folder to Build android application**
+
+**To Build clone the repo and import Bank-Mag in Android studio and click on Run icon or Build the apk file using option Build --> Build Bundle --> Build APK**
+
+To change the rest endpoint in future 
+
+
+
+## To Set up and Run VNC Server with Android Emulator
+
+### Pull the docker image
+``` sudo docker pull budtmo/docker-android:emulator_13.0 ```
+
+OR
+
+**To directly download and run the docker image**
+
+``` sudo sudo docker run -d -p 5900:5900 -p 6080:6080 -e EMULATOR_DEVICE="Samsung Galaxy S10" -e WEB_VNC=true --device /dev/kvm --name android-container-1 budtmo/docker-android:emulator_13.0 ``` 
+
+**To view web browser**
+``` http://<instance or host-ip>:6080 ```
+
+**To connect**
+Click on ``` Connect ```
+
+### To view in Vnc-Client application 
+
+**Download any vnc client**
+``` 
+Ref link 1 : https://www.cyberciti.biz/faq/install-and-configure-tigervnc-server-on-ubuntu-18-04/
+Ref link 2 : https://adamtheautomator.com/remmina-on-ubuntu/
+```
+
+**To view in vnc client application**
+``` Open vnc client and use ```
+``` <host-ip>:5900 ``` 
+
+
 
 
 
