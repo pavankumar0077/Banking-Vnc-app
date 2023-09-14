@@ -5,7 +5,8 @@
 2) User-Login-Inter-Com docker image
 3) Mysql docker image
 4) Vnc server docker image
-5) Android application 
+5) Android application
+
 
 ## To Set up and Run Mysql DB
 
@@ -207,6 +208,34 @@ Ref link 2 : https://adamtheautomator.com/remmina-on-ubuntu/
 ``` Open vnc client and use ```
 ``` <host-ip>:5900 ``` 
 
+
+Application Management
+--
+Back-end
+--
+1) Account-Service
+2) User-Login-Inter-Com
+3) Mysql DB
+
+Front-end
+--
+1) Android application development
+
+Streaming
+--
+1) VNC Server
+2) VNC Client
+
+Networking
+--
+1) Docker networks
+2) Docker-compose files
+
+Application Developed By
+--
+1) **_PAVAN KUMAR DASARI_** &nbsp; &nbsp; &nbsp;  (Back-end & Front-end)
+2) **_ABHISHEK RAJ_**     &nbsp;  &nbsp; &nbsp;  (Networking)
+3) **_PRAVEENA SAGI_**    &nbsp; &nbsp; &nbsp;  (Streaming)
 
 
 
