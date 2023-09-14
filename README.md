@@ -129,7 +129,52 @@ And check for IPAddress
 
 **To Build clone the repo and import Bank-Mag in Android studio and click on Run icon or Build the apk file using option Build --> Build Bundle --> Build APK**
 
-To change the rest endpoint in future 
+### To change the rest endpoint in future like IP or Port then do some modification
+
+**Step 1:**
+
+Open the android application in android studio and go to java folder ---> and pkg-name (com.idrbt.bank_mag) --> Go to Login class code 
+Go to line number 53 and find apiUrl and change the IP ADDRESS OR PORT number as required
+```
+ String apiUrl = "http://192.168.138.156:9902/api/login/account/" + accountNumber;
+
+        Request request = new Request.Builder()
+                .url(apiUrl)
+                .build();
+``` 
+This code will be present in loginUser() method
+```
+private void loginUser()
+```
+
+**Step 2:**
+
+### NOTE : ONLY CHANGE IP ADDRESS AND PORT
+
+**Open the android application in android studio and go to java folder ---> and pkg-name (com.idrbt.bank_mag) --> Go to Registration class code
+Go to line number 92 and 136. Find the below lines**
+```
+private void registerUser(){
+ 
+ Request request = new Request.Builder()
+                .url("http://192.168.138.156:9902/api/login/createLogin")
+                .post(requestBody)
+                .build();
+}
+```
+and change url ``` .url("http://192.168.138.156:9902/api/login/createLogin") ``` change the IP ADDRESS OR PORT as required in the registerUser() method.
+
+```
+private void openAccount() {
+
+Request request = new Request.Builder()
+                .url("http://192.168.138.156:9901/api/accounts/createAccount")
+                .post(requestBody)
+                .build();
+
+}
+```
+and change url ``` .url("http://192.168.138.156:9901/api/accounts/createAccount") ``` change the IP ADDRESS OR PORT as required in the OpenAccount() method.
 
 
 
