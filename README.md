@@ -130,6 +130,8 @@ And check for IPAddress
 
 **To Build clone the repo and import Bank-Mag in Android studio and click on Run icon or Build the apk file using option Build --> Build Bundle --> Build APK**
 
+**You can also find the apk file in the Bank-Mag folder in this repo.**
+
 ### To change the rest endpoint in future like IP or Port then do some modification
 
 **Step 1:**
