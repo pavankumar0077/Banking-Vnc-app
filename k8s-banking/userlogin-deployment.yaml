@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: userlogin-service
+spec:
+  replicas: 1 # You can adjust this as needed
+  selector:
+    matchLabels:
+      app: userlogin-service
+  template:
+    metadata:
+      labels:
+        app: userlogin-service
+    spec:
+      containers:
+      - name: userlogin
+        image: pavan0077/vnc-login:v2
+        ports:
+          - containerPort: 9902
+
