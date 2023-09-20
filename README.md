@@ -183,6 +183,8 @@ and change url ``` .url("http://192.168.138.156:9901/api/accounts/createAccount"
 
 ## To Set up and Run VNC Server with Android Emulator
 
+REF LINK : https://github.com/budtmo/docker-android
+
 ### Pull the docker image
 ``` sudo docker pull budtmo/docker-android:emulator_13.0 ```
 
