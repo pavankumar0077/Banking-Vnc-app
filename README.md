@@ -209,8 +209,14 @@ Ref link 2 : https://adamtheautomator.com/remmina-on-ubuntu/
 ```
 
 **To view in vnc client application**
+--
 ``` Open vnc client and use ```
 ``` <host-ip>:5900 ``` 
+
+**To Capture DCP DUMP** 
+--
+``` sudo tcpdump -w packet_9nov.pcap -i docker0 port 5900 -B 100000 ```
+``` Here -w is to write in the file packet_9nov.pcap - file name, port 5900 to get only port specific captures, -i is interface -B 10000 is used for buffer size ```
 
 
 Application Management
