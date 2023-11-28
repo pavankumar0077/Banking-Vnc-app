@@ -11,33 +11,26 @@
 5) Vnc server docker image
 6) Android application
 
+## To Set up Docker network for Fixed Ip
+
+**Step 1: Create a User-Defined Bridge Network**
+``` 
+sudo docker network create --subnet=172.18.0.0/16 mynet
+```
 
 ## To Set up and Run Mysql DB
 
-```
-Step 1: Create a User-Defined Bridge Network
-
-sudo docker network create --subnet=172.18.0.0/16 mynet
-
-Step 2: Run the MySQL Container with a Fixed IP
-
-sudo docker run -e MYSQL_ROOT_PASSWORD=iDRBT@007 -d --network=mynet --ip=172.18.0.2 --name=mysql-container mysql
-
-Step 3: Run the VNC Accounts Container with a Fixed IP
-
-sudo docker run -d -p 9901:9901 --network=mynet --ip=172.18.0.3 --name=vnc-accounts-container pavan0077/vnc-accounts:V2
-
-Step 4: Run the VNC Login Container with a Fixed IP
-
-sudo docker run -d -p 9902:9902 --network=mynet --ip=172.18.0.4 --name=vnc-login-container pavan0077/vnc-login:V2
-
-```
-
 ### Pull the latest image of mysql from dockerhub
-```sudo docker pull mysql:latest ``` 
+```
+sudo docker pull mysql:latest 
+```
 
 ### Run the docker image
-``` sudo docker run -e MYSQL_ROOT_PASSWORD=iDRBT@007 -d mysql ```
+<!-- ``` sudo docker run -e MYSQL_ROOT_PASSWORD=iDRBT@007 -d mysql ``` -->
+
+```
+sudo docker run -e MYSQL_ROOT_PASSWORD=iDRBT@007 -d --network=mynet --ip=172.18.0.2 --name=mysql-container mysql
+```
 
 ### Get the ip address of the mysql container 
 ```
@@ -102,13 +95,20 @@ mysql> select * from accounts;
 ## To Set up and Run Account-Service
 
 ### Pull the docker image
-``` sudo docker pull pavan0077/vnc-accounts:v1 ```
+<!-- ``` sudo docker pull pavan0077/vnc-accounts:v1 ``` -->
+
+```
+docker pull pavan0077/vnc-accounts:V2
+```
 
 OR
 
 **To directly download and run the docker image**
+```
+sudo docker run -d -p 9901:9901 --network=mynet --ip=172.18.0.3 --name=vnc-accounts-container pavan0077/vnc-accounts:V2
+```
 
-``` sudo docker run -d -p 9901:9901 pavan0077/vnc-accounts:v1 ``` 
+<!-- ``` sudo docker run -d -p 9901:9901 pavan0077/vnc-accounts:V2 ``` -->
 
 ### To check the container with rest end point use container docker ip
 
@@ -119,20 +119,23 @@ OR
 ``` sudo docker inspect c6c36ddb79f5 ```
 
 And check for IPAddress
-``` "IPAddress": "172.17.0.5" ``` 
+``` "IPAddress": "172.18.0.3" ``` 
 
 ```
 
 ## To Set up and Run User-Login-Inter-Com
 
 ### Pull the docker image
-``` sudo docker pull pavan0077/vnc-login:v2 ```
+``` sudo docker pull pavan0077/vnc-login:V2 ```
 
 OR
 
 **To directly download and run the docker image**
 
-``` sudo docker run -d -p 9902:9902 pavan0077/vnc-login:v2 ``` 
+<!-- ``` sudo docker run -d -p 9902:9902 pavan0077/vnc-login:v2 ```  -->
+```
+sudo docker run -d -p 9902:9902 --network=mynet --ip=172.18.0.4 --name=vnc-login-container pavan0077/vnc-login:V2
+```
 
 ### To check the container with rest end point use container docker ip
 
@@ -143,7 +146,7 @@ OR
 ``` sudo docker inspect c6c36ddb79f5 ```
 
 And check for IPAddress
-``` "IPAddress": "172.17.0.4" ``` 
+``` "IPAddress": "172.18.0.4" ``` 
 
 ```
 
@@ -157,52 +160,17 @@ And check for IPAddress
 
 ### To change the rest endpoint in future like IP or Port then do some modification
 
-**Step 1:**
-
-Open the android application in android studio and go to java folder ---> and pkg-name (com.idrbt.bank_mag) --> Go to Login class code 
-Go to line number 53 and find apiUrl and change the IP ADDRESS OR PORT number as required
+**Step 1** : Change the config file with new properties
 ```
- String apiUrl = "http://192.168.138.156:9902/api/login/account/" + accountNumber;
-
-        Request request = new Request.Builder()
-                .url(apiUrl)
-                .build();
-``` 
-This code will be present in loginUser() method
+https://github.com/5gucl-idrbt/config-server
 ```
-private void loginUser()
+**Step 2** : Change the ip or port as per requirement
 ```
-
-**Step 2:**
-
-### NOTE : ONLY CHANGE IP ADDRESS AND PORT
-
-**Open the android application in android studio and go to java folder ---> and pkg-name (com.idrbt.bank_mag) --> Go to Registration class code
-Go to line number 92 and 136. Find the below lines**
-```
-private void registerUser(){
- 
- Request request = new Request.Builder()
-                .url("http://192.168.138.156:9902/api/login/createLogin")
-                .post(requestBody)
-                .build();
+{
+  "loginServiceUrl": "http://192.168.138.156:9902/api/login",
+  "accountServiceUrl": "http://192.168.138.156:9901/api/accounts"
 }
 ```
-and change url ``` .url("http://192.168.138.156:9902/api/login/createLogin") ``` change the IP ADDRESS OR PORT as required in the registerUser() method.
-
-```
-private void openAccount() {
-
-Request request = new Request.Builder()
-                .url("http://192.168.138.156:9901/api/accounts/createAccount")
-                .post(requestBody)
-                .build();
-
-}
-```
-and change url ``` .url("http://192.168.138.156:9901/api/accounts/createAccount") ``` change the IP ADDRESS OR PORT as required in the OpenAccount() method.
-
-
 
 ## To Set up and Run VNC Server with Android Emulator
 
