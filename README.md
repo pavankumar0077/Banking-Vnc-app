@@ -6,9 +6,10 @@
 ## Required services 
 1) Account-Service docker image
 2) User-Login-Inter-Com docker image
-3) Mysql docker image
-4) Vnc server docker image
-5) Android application
+3) Config-Server 
+4) Mysql docker image
+5) Vnc server docker image
+6) Android application
 
 
 ## To Set up and Run Mysql DB
