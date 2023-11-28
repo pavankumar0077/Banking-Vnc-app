@@ -1,6 +1,7 @@
 package com.idrbt.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,7 @@ import com.idrbt.service.LoginService;
 
 import lombok.AllArgsConstructor;
 
+@RefreshScope
 @RestController
 @RequestMapping("api/login")
 @AllArgsConstructor
