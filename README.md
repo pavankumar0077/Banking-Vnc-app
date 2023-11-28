@@ -195,7 +195,29 @@ OR
 
 **To directly download and run the docker image**
 
-``` sudo sudo docker run -d -p 5900:5900 -p 6080:6080 -e EMULATOR_DEVICE="Samsung Galaxy S10" -e WEB_VNC=true --device /dev/kvm --name android-container-1 budtmo/docker-android:emulator_13.0 ``` 
+```
+Step 1: Create a Directory for the APK
+
+mkdir android-app
+mv final.apk android-app/
+```
+```
+Step 2: Mount the Directory into the Docker Container
+
+sudo docker run -d -p 5901:5900 -p 6081:6080 -e EMULATOR_DEVICE="Samsung Galaxy S10" -e WEB_VNC=true --device /dev/kvm -v /home/idrbt/android-app:/app/android-app --name android-container-1 budtmo/docker-android:emulator_13.0
+```
+```
+Step 3: Install the Application in the Emulator
+
+sudo docker exec -it android-container-1 /bin/bash
+
+cd /app/android-app/
+adb install -r final.apk
+
+```
+
+
+<!-- ``` sudo sudo docker run -d -p 5900:5900 -p 6080:6080 -e EMULATOR_DEVICE="Samsung Galaxy S10" -e WEB_VNC=true --device /dev/kvm --name android-container-1 budtmo/docker-android:emulator_13.0 ``` -->
 
 **To view web browser**
 ``` http://<instance or host-ip>:6080 ```
