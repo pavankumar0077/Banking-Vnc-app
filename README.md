@@ -183,7 +183,9 @@ OR
 
 **To directly download and run the docker image**
 
+
 ```
+https://github.com/5g-ucl-idrbt/Banking-Vnc-app/tree/main/BankMag
 Step 1: Create a Directory for the APK
 
 mkdir android-app
