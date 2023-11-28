@@ -1,5 +1,8 @@
 # Banking Application in VNC
 
+![image](https://github.com/5g-ucl-idrbt/Banking-Vnc-app/assets/131157072/b615618a-3828-45fc-b564-42a2f8b31bc2)
+
+
 ## Required services 
 1) Account-Service docker image
 2) User-Login-Inter-Com docker image
