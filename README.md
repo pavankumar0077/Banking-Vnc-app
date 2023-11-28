@@ -220,7 +220,7 @@ adb install -r final.apk
 <!-- ``` sudo sudo docker run -d -p 5900:5900 -p 6080:6080 -e EMULATOR_DEVICE="Samsung Galaxy S10" -e WEB_VNC=true --device /dev/kvm --name android-container-1 budtmo/docker-android:emulator_13.0 ``` -->
 
 **To view web browser**
-``` http://<instance or host-ip>:6080 ```
+``` http://<instance or host-ip>:6081 ```
 
 **To connect**
 Click on ``` Connect ```
@@ -236,7 +236,7 @@ Ref link 2 : https://adamtheautomator.com/remmina-on-ubuntu/
 **To view in vnc client application**
 --
 ``` Open vnc client and use ```
-``` <host-ip>:5900 ``` 
+``` <host-ip>:5901 ``` 
 
 **To Capture DCP DUMP** 
 --
