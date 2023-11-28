@@ -48,6 +48,17 @@ How to Download and use the application
 5) 2nd way : Use ``` ./mvnw spring-boot:run ``` if maven is not installed in the root folder
 6) 3rd way : cd to target folder and run ```java -jar Account-Service-0.0.1-SNAPSHOT.jar ```
 ```
+How to Generate Jar file
+--
+### Using STS tool
+1) Right click on the springboot applicaiton --> Run as --> Maven install --> If Build is successful we will get jar file
+2) Check the target folder present in the root folder --> Check for ..Jar file
+
+### Using CLI
+1) cd to project folder ---> mvn clean install
+2) If build is successsful we will get jar file
+3) Check in the target folder
+
 ### How to test the application
 
 **Post Request to create account**
