@@ -13,6 +13,25 @@
 
 ## To Set up and Run Mysql DB
 
+```
+Step 1: Create a User-Defined Bridge Network
+
+sudo docker network create --subnet=172.18.0.0/16 mynet
+
+Step 2: Run the MySQL Container with a Fixed IP
+
+sudo docker run -e MYSQL_ROOT_PASSWORD=iDRBT@007 -d --network=mynet --ip=172.18.0.2 --name=mysql-container mysql
+
+Step 3: Run the VNC Accounts Container with a Fixed IP
+
+sudo docker run -d -p 9901:9901 --network=mynet --ip=172.18.0.3 --name=vnc-accounts-container pavan0077/vnc-accounts:V2
+
+Step 4: Run the VNC Login Container with a Fixed IP
+
+sudo docker run -d -p 9902:9902 --network=mynet --ip=172.18.0.4 --name=vnc-login-container pavan0077/vnc-login:V2
+
+```
+
 ### Pull the latest image of mysql from dockerhub
 ```sudo docker pull mysql:latest ``` 
 
