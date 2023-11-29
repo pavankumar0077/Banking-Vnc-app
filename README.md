@@ -177,28 +177,29 @@ https://github.com/5gucl-idrbt/config-server
 REF LINK : https://github.com/budtmo/docker-android
 
 ### Pull the docker image
-``` sudo docker pull budtmo/docker-android:emulator_13.0 ```
-
-OR
-
-**To directly download and run the docker image**
-
+```
+sudo docker pull budtmo/docker-android:emulator_13.0 
 
 ```
-https://github.com/5g-ucl-idrbt/Banking-Vnc-app/tree/main/BankMag
-Step 1: Create a Directory for the APK
 
+Step 1: Download the android application
+```
+https://github.com/5g-ucl-idrbt/Banking-Vnc-app/tree/main/BankMag
+```
+
+Step 2: Create a Directory for the APK
+```
 mkdir android-app
 mv final.apk android-app/
 ```
-```
-Step 2: Mount the Directory into the Docker Container
 
+Step 3: Mount the Directory into the Docker Container
+```
 sudo docker run -d -p 5901:5900 -p 6081:6080 -e EMULATOR_DEVICE="Samsung Galaxy S10" -e WEB_VNC=true --device /dev/kvm -v /home/idrbt/android-app:/app/android-app --name android-container-1 budtmo/docker-android:emulator_13.0
 ```
-```
-Step 3: Install the Application in the Emulator
 
+Step 4: Install the Application in the Emulator
+```
 sudo docker exec -it android-container-1 /bin/bash
 
 cd /app/android-app/
