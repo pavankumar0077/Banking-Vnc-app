@@ -31,6 +31,10 @@ sudo docker pull mysql:latest
 ```
 sudo docker run -e MYSQL_ROOT_PASSWORD=iDRBT@007 -d --network=mynet --ip=172.18.0.2 --name=mysql-container mysql
 ```
+### Install mysql cli
+```
+sudo apt install mysql-client-core-8.0
+```
 
 ### Get the ip address of the mysql container 
 ```
