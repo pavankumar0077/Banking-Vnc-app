@@ -85,5 +85,24 @@ Test the Applicaton
 --
 1) It runs on 8888 Port, Allow ufw rules
 2) ``` sudo ufw allow 8888 ```
-3) Check http://<instance-ip>:8888/actuator/refresh or /actuator 
+3) Check http://<instance-ip>:8888/actuator/refresh or /actuator
+
+Change IP and re-build the application if needed
+--
+![image](https://github.com/5g-ucl-idrbt/Banking-Vnc-app/assets/131157072/d869ce70-eb15-4580-aa8b-0fb1e36cac53)
+
+Step 1: Goto application root folder, Check for src/main/resources 
+Step 2: Open application.properties file
+Step 3: ![image](https://github.com/5g-ucl-idrbt/Banking-Vnc-app/assets/131157072/9e92bc36-42ea-4cbb-ae91-885d50897336)
+- Change server.address = Your desired IP address
+
+Step 4: Rebuild the application 
+- Right click on the application
+- Click on Run as
+- Select Maven Install
+![image](https://github.com/5g-ucl-idrbt/Banking-Vnc-app/assets/131157072/2bea165e-54fe-48f0-bb5d-86390f46dd4a)
+
+Step 5: Check build is successfully or not, if yes 
+Step 6: Goto root folder of the application --> Goto target folder --> You will find config-server.jar file 
+
 
