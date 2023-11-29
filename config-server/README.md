@@ -13,6 +13,11 @@ Backend application properties
 
 - This code "config-server" only for Backend part for the android application
 
+Docker Image of Config-Server
+--
+``` docker pull pavan0077/config-server:latest ```
+
+``` sudo docker run -d -p 8888:8888 pavan0077/config-server ```
 
 Imp things to be done 
 --
