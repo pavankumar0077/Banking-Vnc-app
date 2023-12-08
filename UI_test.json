@@ -1,0 +1,180 @@
+{
+  "Name": "ui_test_a",
+  "CreationDate": "2023-12-8",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "http://dockerhost:6081/vnc.html?host=Dockerhost&port=6081",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "id=noVNC_connect_button",
+      "Value": "176,22",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "373,555",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "247,315",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "396,615",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "263,670",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "280,622",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "308,619",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "218,750",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "222,627",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "222,627",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "460,628",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "251,364",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "396,631",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "264,673",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "275,629",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "303,629",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "227,754",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "218,677",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "217,629",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "217,629",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "459,626",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "251,418",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "264,630",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "264,630",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "397,710",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "345,468",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "998,451",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "998,451",
+      "Description": ""
+    }
+  ]
+}
