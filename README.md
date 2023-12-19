@@ -292,8 +292,12 @@ https://github.com/dineshshetty/Android-InsecureBankv2/releases/tag/2.3.1
 ```
 https://sourceforge.net/projects/appiefiles/files/OWASP%20GoatDroid-%20Herd%20Financial%20Android%20App.apk/download
 ```
+## For running the VNC client in a docker env
+our vnc server ip goes here REMOTE_HOST, out port goes here REMOTE_PORT
+```
+sudo docker run -d -e REMOTE_HOST=192.168.138.123 -e REMOTE_PORT=5901 -p 8081:8081 dougw/novnc
 
-   
+```
 
 Application Developed By
 --
