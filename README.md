@@ -294,6 +294,7 @@ https://sourceforge.net/projects/appiefiles/files/OWASP%20GoatDroid-%20Herd%20Fi
 ```
 ## For running the VNC client in a docker env
 our vnc server ip goes here REMOTE_HOST, out port goes here REMOTE_PORT
+ref: https://hub.docker.com/r/dougw/novnc
 ```
 sudo docker run -d -e REMOTE_HOST=192.168.138.123 -e REMOTE_PORT=5901 -p 8081:8081 dougw/novnc
 
