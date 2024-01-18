@@ -227,6 +227,12 @@ Click on ``` Connect ```
 Ref link 1 : https://www.cyberciti.biz/faq/install-and-configure-tigervnc-server-on-ubuntu-18-04/
 Ref link 2 : https://adamtheautomator.com/remmina-on-ubuntu/
 ```
+In case the emulator closes:
+
+```
+emulator -avd samsung_galaxy_s10_13.0 -read-only
+adb devices
+```
 
 **To view in vnc client application**
 --
