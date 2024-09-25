@@ -1,0 +1,198 @@
+{
+  "Name": "ui_test_e",
+  "CreationDate": "2023-12-20",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "http://192.168.138.123:6081/",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "id=noVNC_connect_button",
+      "Value": "82,18",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "82,389",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "241,210",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "241,210",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "346,560",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "257,311",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "390,624",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "244,671",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "268,628",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "293,631",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "214,754",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "216,628",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "216,628",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "448,624",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "241,367",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "391,628",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "257,676",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "270,632",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "296,628",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "218,754",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "211,664",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "211,629",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "211,629",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "443,633",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "241,402",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "233,619",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "233,619",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "381,711",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "343,468",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "991,457",
+      "Description": ""
+    },
+    {
+      "Command": "clickAt",
+      "Target": "xpath=//*[@id=\"noVNC_container\"]/div/canvas",
+      "Value": "991,457",
+      "Description": ""
+    }
+  ]
+}
